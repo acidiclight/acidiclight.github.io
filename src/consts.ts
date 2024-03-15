@@ -35,5 +35,20 @@ export const SOCIAL_LINKS = [
         link: 'https://youtube.com/c/AcidicLight',
         icon: 'mdi:youtube'
     },
-    
 ]
+
+// TODO: Add support for child links
+export const MENU_LINKS = [
+    {
+        name: "Home",
+        href: "/"
+    },
+    {
+        name: "Blog",
+        href: "/blog"
+    },
+    {
+        name: "About Me",
+        href: "/about"
+    }
+];

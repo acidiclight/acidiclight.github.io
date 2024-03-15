@@ -1,0 +1,6 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { MENU_LINKS } from '../consts';
+---
+
+{ MENU_LINKS && MENU_LINKS.map((link) => <HeaderLink href={link.href}>{link.name}</HeaderLink>)}

@@ -70,3 +70,7 @@ main ul {
 main ol {
     @apply ms-6 list-decimal;
 }
+
+.mobile-nav-button {
+    @apply md:hidden inline-flex p-4 text-lg rounded-lg border-solid border-gray-600
+}

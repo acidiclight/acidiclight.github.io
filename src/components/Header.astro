@@ -1,18 +1,39 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+import HeaderLinks from './HeaderLinks.astro';
 import PrimaryLogo from './PrimaryLogo.astro';
 import SocialLinks from './SocialLinks.astro';
+import { Icon } from 'astro-icon/components';
 import { SITE_TITLE, SITE_LOGO } from '../consts';
 ---
 
 <header class="bg-gray-950">
-	<nav class="flex container items-center justify-between mx-auto p-12">
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+	<nav class="flex container items-center justify-between mx-auto p-4 md:p-12">
+		<!-- Desktop navigation -->
+		<div class="hidden w-full md:block md:w-auto">
+			<HeaderLinks />
 		</div>
+
 		<PrimaryLogo title={SITE_TITLE} logo={SITE_LOGO} />
-		<SocialLinks />
+		
+		<!-- Desktop social links -->
+		<div class="hidden w-full md:block md:w-auto">
+			<SocialLinks />
+		</div>
+		
+		<!-- Mobile menu toggle -->
+		<button data-collapse-toggle="mobile-nav" aria-controls="mobile-nav" aria-expanded="false" class="mobile-nav-button z-50">
+			<span class="sr-only">Open site menu</span>
+			<Icon name="mdi:menu" />
+		</button>
+
+		<div class="hidden absolute left-0 top-0 bottom-0 right-0 bg-blue-950/75 backdrop-blur-lg z-40" id="mobile-nav">
+			<div class="flex flex-col items-center justify-center space-y-12 h-full">
+				<PrimaryLogo title={SITE_TITLE} logo={SITE_LOGO} />
+				<div class="flex flex-col items-center space-y-4">
+					<HeaderLinks />
+				</div>
+				<SocialLinks />
+			</div>
+		</div>
 	</nav>
 </header>
