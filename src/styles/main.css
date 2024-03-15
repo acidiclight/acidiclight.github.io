@@ -7,16 +7,20 @@ body {
     @apply text-gray-50
 }
 
+p {
+    @apply leading-loose;
+}
+
 article img {
     @apply object-fill w-full
 }
 
 article img.left {
-    @apply md:max-w-xs md:float-left md:object-contain md:w-auto object-fill w-full
+    @apply md:m-4 md:max-w-xs md:float-left md:object-contain md:w-auto object-fill w-full
 }
 
 article img.right {
-    @apply md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
+    @apply md:m-4 md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
 }
 
 article iframe {
@@ -24,9 +28,45 @@ article iframe {
 }
 
 article iframe.left {
-    @apply md:max-w-xs md:float-left md:object-contain md:w-auto object-fill w-full
+    @apply md:m-4 md:max-w-xs md:float-left md:object-contain md:w-auto object-fill w-full
 }
 
 article iframe.right {
-    @apply md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
+    @apply md:m-4 md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
+}
+
+main p {
+    @apply mb-4 mt-2;
+}
+
+main h1 {
+    @apply text-5xl font-medium leading-tight;
+}
+
+main h2 {
+    @apply text-4xl font-medium leading-tight;
+}
+
+main h3 {
+     @apply text-3xl font-medium leading-tight;
+}
+
+main h4 {
+    @apply text-2xl font-medium leading-tight;
+}
+
+main h5 {
+    @apply text-xl font-medium leading-tight;
+}
+
+main h6 {
+    @apply text-base font-medium leading-tight;
+}
+
+main ul {
+    @apply ms-6 list-disc;
+}
+
+main ol {
+    @apply ms-6 list-decimal;
 }
