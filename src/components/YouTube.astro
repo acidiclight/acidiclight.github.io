@@ -1,0 +1,14 @@
+---
+const { id, align } = Astro.props;
+const youtubeURL = !!id ? `https://youtube.com/embed/${id}` : undefined;
+
+const classes = `aspect-video ${align == "left" || align == "right" ? align : ""}`
+---
+
+{id && 
+<iframe src={youtubeURL}
+        class={classes}}
+       frameborder="0"
+       allowfullscreen="true">
+    </iframe>
+}

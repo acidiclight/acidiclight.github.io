@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-950;
+    @apply text-gray-50
+}
+
+article img {
+    @apply object-fill w-full
+}
+
+article img.left {
+    @apply md:max-w-xs md:float-left md:object-contain md:w-auto object-fill w-full
+}
+
+article img.right {
+    @apply md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
+}
+
+article iframe {
+    @apply object-fill w-full
+}
+
+article iframe.left {
+    @apply md:max-w-xs md:float-left md:object-contain md:w-auto object-fill w-full
+}
+
+article iframe.right {
+    @apply md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
+}
