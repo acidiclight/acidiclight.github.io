@@ -1,0 +1,11 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { name, link, icon } = Astro.props
+---
+
+<a target="_blank" href={link}>
+    <span class="sr-only">{name}</span>
+    <Icon name={icon} />
+</a>
+

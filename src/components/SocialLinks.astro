@@ -1,0 +1,10 @@
+---
+import SocialLink from './SocialLink.astro'
+import { SOCIAL_LINKS } from '../consts';
+---
+
+<div class="flex items-center space-x-4">
+    {
+        SOCIAL_LINKS && SOCIAL_LINKS.map((link) => <SocialLink name={link.name} link={link.link} icon={link.icon} />)
+    }
+</div>
