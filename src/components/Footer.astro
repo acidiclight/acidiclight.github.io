@@ -1,12 +1,31 @@
 ---
 import SocialLinks from './SocialLinks.astro';
+import PrimaryLogo from './PrimaryLogo.astro'
 
 const today = new Date();
+
+import { SITE_TITLE, SITE_LOGO, COPYRIGHT_LEGAL_NAME, SITE_OWNER_URL, FOOTER_EXTRA, A11Y_ISSUE_LINK } from '../consts';
 ---
 
 <footer class="bg-blue-800">
 	<div class="container mx-auto flex flex-col items-center space-y-6 p-12">
-		<span>&copy; {today.getFullYear()} Your name here. All rights reserved.</span>
+		<PrimaryLogo title={SITE_TITLE} logo={SITE_LOGO} />
+		
+		<span>&copy; 
+			{today.getFullYear()}
+			{ SITE_OWNER_URL && 
+				<a href={SITE_OWNER_URL}>{ COPYRIGHT_LEGAL_NAME }</a>
+			}
+			{ !SITE_OWNER_URL &&
+				<b>{ COPYRIGHT_LEGAL_NAME }</b>
+			} &bull;
+			{ FOOTER_EXTRA }
+		</span>
+
 		<SocialLinks />
+		
+		{ A11Y_ISSUE_LINK && 
+			<span>Accessibility issues? <a href={A11Y_ISSUE_LINK}>Report them here!</a></span>
+		}
 	</div>
 </footer>

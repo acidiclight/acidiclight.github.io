@@ -1,8 +1,13 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Astro Blog';
-export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const SITE_TITLE = 'acidic light';
+export const SITE_LOGO = "/assets/acidiclight.png";
+export const FOOTER_EXTRA = "All rights reserved. Ritchie artwork by potato farm.";
+export const SITE_DESCRIPTION = "Blind game developer and proghrammer most well-known for being lead programmer of Restitched.";
+export const SITE_OWNER_URL = "https://acidiclight.dev/"
+export const COPYRIGHT_LEGAL_NAME = "Michael VanOverbeek";
+export const A11Y_ISSUE_LINK = "https://github.com/acidiclight/acidiclight.github.io/issues";
 
 export const SOCIAL_LINKS = [
     {
