@@ -11,7 +11,7 @@ import { SITE_TITLE, SITE_LOGO, COPYRIGHT_LEGAL_NAME, SITE_OWNER_URL, FOOTER_EXT
 	<div class="container mx-auto flex flex-col items-center space-y-6 p-12">
 		<PrimaryLogo title={SITE_TITLE} logo={SITE_LOGO} />
 		
-		<span>&copy; 
+		<span class="text-center">&copy; 
 			{today.getFullYear()}
 			{ SITE_OWNER_URL && 
 				<a href={SITE_OWNER_URL}>{ COPYRIGHT_LEGAL_NAME }</a>
@@ -25,7 +25,7 @@ import { SITE_TITLE, SITE_LOGO, COPYRIGHT_LEGAL_NAME, SITE_OWNER_URL, FOOTER_EXT
 		<SocialLinks />
 		
 		{ A11Y_ISSUE_LINK && 
-			<span>Accessibility issues? <a href={A11Y_ISSUE_LINK}>Report them here!</a></span>
+			<span class="text-center">Accessibility issues? <a href={A11Y_ISSUE_LINK}>Report them here!</a></span>
 		}
 	</div>
 </footer>

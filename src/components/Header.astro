@@ -6,8 +6,8 @@ import { Icon } from 'astro-icon/components';
 import { SITE_TITLE, SITE_LOGO } from '../consts';
 ---
 
-<header class="bg-gray-900 sticky top-0">
-	<nav class="flex container items-center justify-between mx-auto p-4 md:p-12">
+<header class="bg-gray-900">
+	<nav class="flex container items-center justify-between mx-auto p-4 md:p-12 sticky top-0 z-50">
 		<!-- Desktop navigation -->
 		<div class="hidden w-full md:block md:w-auto">
 			<HeaderLinks />
@@ -21,19 +21,23 @@ import { SITE_TITLE, SITE_LOGO } from '../consts';
 		</div>
 		
 		<!-- Mobile menu toggle -->
-		<button data-collapse-toggle="mobile-nav" aria-controls="mobile-nav" aria-expanded="false" class="mobile-nav-button z-50">
+		<button data-collapse-toggle="mobile-nav" aria-controls="mobile-nav" aria-expanded="false" class="mobile-nav-button">
 			<span class="sr-only">Open site menu</span>
 			<Icon name="mdi:menu" />
 		</button>
-
-		<div class="hidden absolute left-0 top-0 bottom-0 right-0 bg-blue-950/75 backdrop-blur-lg z-40 transition-all duration-200" id="mobile-nav">
-			<div class="flex flex-col items-center justify-center space-y-12 h-full">
-				<PrimaryLogo title={SITE_TITLE} logo={SITE_LOGO} />
-				<div class="flex flex-col items-center space-y-4">
-					<HeaderLinks />
-				</div>
-				<SocialLinks />
-			</div>
-		</div>
 	</nav>
+
+	<div class="hidden absolute left-0 top-0 bottom-0 right-0 bg-blue-950/75 backdrop-blur-lg transition-all duration-200" id="mobile-nav">
+		<div class="flex flex-col items-center justify-center space-y-12 h-full">
+			<PrimaryLogo title={SITE_TITLE} logo={SITE_LOGO} />
+			<div class="flex flex-col items-center space-y-4">
+				<HeaderLinks />
+			</div>
+			<SocialLinks />
+		</div>
+	</div>
 </header>
+
+
+
+
