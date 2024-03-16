@@ -3,15 +3,22 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/main.css';
 
+import { SITE_TITLE } from '../consts';
+
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
+    type?: string;
+    category?: string,
+    tags?: string[];
+    date?: Date,
+    modified?: Date
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/assets/hero-default.png' } = Astro.props;
+const { title, description, category, tags, date, modified, type = "website", image = '/assets/hero-default.png' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -33,11 +40,18 @@ const { title, description, image = '/assets/hero-default.png' } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content={SITE_TITLE} />
+
+{date && <meta property="og:article:published_time" content={date} /> }
+{modified && <meta property="og:article:modified_time" content={modified} /> }
+{category && <meta property="og:article:section" content={category} /> }
+{tags && tags.map((tag) => <meta property="og:article:tag" content={tag} /> )}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />

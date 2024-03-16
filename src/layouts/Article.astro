@@ -6,10 +6,10 @@ type Props = CollectionEntry<'blog'>['data'];
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props.frontmatter || Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags, category } = Astro.props.frontmatter || Astro.props;
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION} lead={description} leadTitle={title} heroImage={heroImage} pubDate={pubDate} updatedDate={updatedDate}>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION} lead={description} leadTitle={title} heroImage={heroImage} pubDate={pubDate} updatedDate={updatedDate} type="article" category={category} tags={tags}>
     <article class="container mx-auto">
         <div class="md:w-1/2 mx-auto">
             <slot />

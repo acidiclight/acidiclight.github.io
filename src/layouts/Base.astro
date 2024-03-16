@@ -5,15 +5,17 @@ import Footer from '../components/Footer.astro';
 import { Icon } from 'astro-icon/components';
 import FormattedDate from '../components/FormattedDate.astro';
 
-const { title, description, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate } = Astro.props.frontmatter || Astro.props;
+const { title, description, type, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate, category, tags } = Astro.props.frontmatter || Astro.props;
 
 const pageTitle = leadTitle ? `${leadTitle} &bull; ${title}` : title;
 const pageDescription = lead || description;
+
+const pageTags = tags ? tags.split(',').map((tag) => tag.trim()) : [];
 ---
 
 <html lang="en">
 <head>
-    <BaseHead title={pageTitle} description={pageDescription} image={heroImage} />
+    <BaseHead title={pageTitle} description={pageDescription} image={heroImage} type={type} category={category} tags={pageTags} date={pubDate} modified={updatedDate} />
 </head>
 
 <body>
@@ -27,23 +29,26 @@ const pageDescription = lead || description;
             { leadTitle && <h1 class="text-6xl leading-tight">{leadTitle}</h1> }
             { lead && <p class="text-xl font-light">{lead}</p> }
 
-            {(pubDate || updatedDate) &&
-                <div class="flex items-center space-x-12">
-                    { pubDate && 
-                            <div class="flex items-center space-x-2">
-                                <Icon name="mdi:calendar" />
-                                <FormattedDate date={pubDate} />
-                            </div>
-                    }
-
-                    { updatedDate &&
-                            <div class="flex items-center space-x-2">
-                                <Icon name="mdi:update" />
-                                <FormattedDate date={updatedDate} />
-                            </div>
-                    }
-                </div>
-            }
+            <div class="flex items-center space-x-12">
+                { category &&
+                        <div class="flex items-center space-x-2">
+                            <Icon name="mdi:category" />
+                            <span>{category}</span>
+                        </div>
+                }
+                { pubDate && 
+                        <div class="flex items-center space-x-2">
+                            <Icon name="mdi:calendar" />
+                            <FormattedDate date={pubDate} />
+                        </div>
+                }
+                { updatedDate &&
+                        <div class="flex items-center space-x-2">
+                            <Icon name="mdi:update" />
+                            <FormattedDate date={updatedDate} />
+                        </div>
+                }
+            </div>
         </div>
     </section>
 }

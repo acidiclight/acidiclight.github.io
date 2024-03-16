@@ -2,6 +2,8 @@
 title: 'Letters to my past self: Nullable reference types'
 description: 'A letter to my past self about why you absolutely should use nullable reference types.'
 pubDate: 'Jan 8 2024'
+category: Letters to my past self
+tags: "programming, nullability, types, code"
 ---
 
 I’ve been lead programmer of **Restitched** for almost two years. While it’s still hard to believe I typed that and it’s actually true, it’s given me an opportunity to learn so much more about programming than I could’ve ever expected as a kid or even as an adult going into college. Some say that, if you truly understand something, you should be able to teach it to others. This post is the start of a series of posts I’d like to write where I try to teach what I learned to my past, less-experienced, self. Maybe you’ll learn something too. So, how about we start by talking about **nullable refernce types**?
