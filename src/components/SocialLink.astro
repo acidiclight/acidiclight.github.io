@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon/components';
 const { name, link, icon } = Astro.props
 ---
 
-<a rel="me" target="_blank" href={link} class="transition duration-200 text-white hover:text-blue-400 text-lg">
+<a rel="me" target="_blank" href={link} class="transition duration-200 text-white hover:text-blue-400 text-2xl">
     <span class="sr-only">{name}</span>
     <Icon name={icon} />
 </a>
