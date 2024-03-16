@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9525e06-1c97-4c9c-b818-a0a7003f7d23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.acidiclight.dev.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.acidiclight.dev.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BaseHead.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BaseHead.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/blog/letters-to-my-past-self-nullable-reference-types.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/blog/letters-to-my-past-self-nullable-reference-types.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Article.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Article.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Base.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Base.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BlogPost.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BlogPost.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
