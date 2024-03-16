@@ -36,7 +36,7 @@ So let’s try again. What **actually is** a nullable reference type?
 ## Here’s some code.
 My up-coming hacking game, [Socially Distant](https://sociallydistantgame.com/), has a windowing system in it that lets me create draggable windows for all of the in-game hacking tools you’ll end up using. Let’s look at an example of what a Window class would look like.
 
-```C#
+```cs
 public class Window
 {
     public string Title { get; set; }
@@ -62,7 +62,7 @@ The window class has two methods and several properties. The two methods let you
 
 I might create a window like this:
 
-```C#
+```cs
 Panel terminal = CreateTerminal();
 Sprite terminalIcon = GetIcon("Terminal");
 
@@ -92,7 +92,7 @@ When designing an API, nullable reference types force you as a developer to expl
 
 Let’s rewrite the Window class with nullability in mind.
 
-```C#
+```cs
 // opt into nullable reference types in this file
 #nullable enable
 
@@ -121,7 +121,7 @@ Look at the Title and Icon properties. Notice how, unlike before, their types no
 
 The above code clearly documents that the Window class is completely fine with havving no title or icon assigned. We may also want to annotate the return type of GetIcon() with a nullable reference type indicator as well, to document that the return value may be null.
 
-```C#
+```cs
 public Sprite? GetIcon(string iconName)
 {
     return null;
@@ -132,7 +132,7 @@ We’re not done yet – because the `Content` property of a window is not nulla
 
 In this case, fixing the Content property is simple. Since it’s a requirement for a window to have content on it, we can require it as part of the window’s constructor. If you can’t provide a valid reference to some UI to show in the window, you can’t create a window.
 
-```C#
+```cs
 public class Window
 {
     public string Title { get; set; }
