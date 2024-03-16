@@ -21,7 +21,7 @@ const pageTags = tags ? tags.split(',').map((tag) => tag.trim()) : [];
 <body>
 <Header />
 {(lead || leadTitle || heroImage || ritchie ) &&
-    <section class={heroImage ? 'bg-cover' : 'bg-blue-800'} style={heroImage ? `background-image: url('${heroImage}')` : ''}>
+    <section class={heroImage ? 'bg-cover' : 'bg-blue-900'} style={heroImage ? `background-image: url('${heroImage}')` : ''}>
         <div class="container flex flex-col mx-auto items-center p-12 space-y-6">
             { ritchie &&
                 <img alt="Ritchie" src="/assets/ritchie.png" class="rounded-full object-fill border-2 border-solid border-white aspect-square w-96" />
