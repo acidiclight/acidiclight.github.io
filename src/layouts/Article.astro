@@ -4,30 +4,14 @@ import Base from './Base.astro';
 import type { CollectionEntry } from 'astro:content';
 type Props = CollectionEntry<'blog'>['data'];
 import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props.frontmatter || Astro.props;
 ---
 
-<Base title={title} description={description}>
-    <div class="hero-image">
-        {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-    </div>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION} lead={description} leadTitle={title} heroImage={heroImage} pubDate={pubDate} updatedDate={updatedDate}>
     <article class="container mx-auto">
         <div class="md:w-1/2 mx-auto">
-            <div class="title">
-                <div class="date">
-                    {pubDate && <FormattedDate date={pubDate} />}
-                    {
-                        updatedDate && (
-                                    <div class="last-updated-on">
-                                        Last updated on <FormattedDate date={updatedDate} />
-                                    </div>
-                        )
-                    }
-                </div>
-                <h1>{title}</h1>
-                <hr />
-            </div>
             <slot />
         
             <!-- when any floated images are used in a post, this makes them contribute to the page height -->

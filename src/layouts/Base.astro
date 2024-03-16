@@ -2,8 +2,10 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Icon } from 'astro-icon/components';
+import FormattedDate from '../components/FormattedDate.astro';
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate } = Astro.props.frontmatter || Astro.props;
 ---
 
 <html lang="en">
@@ -13,6 +15,35 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <body>
 <Header />
+{(lead || leadTitle || heroImage || ritchie ) &&
+    <section class={heroImage ? 'bg-cover' : 'bg-blue-800'} style={heroImage ? `background-image: url('${heroImage}')` : ''}>
+        <div class="container flex flex-col mx-auto items-center p-12 space-y-6">
+            { ritchie &&
+                <img alt="Ritchie" src="/assets/ritchie.png" class="rounded-full h-96 object-contain border-2 border-solid border-white" />
+            }
+            { leadTitle && <h1 class="text-6xl leading-tight">{leadTitle}</h1> }
+            { lead && <p class="text-xl font-light">{lead}</p> }
+
+            {(pubDate || updatedDate) &&
+                <div class="flex items-center space-x-12">
+                    { pubDate && 
+                            <div class="flex items-center space-x-2">
+                                <Icon name="mdi:calendar" />
+                                <FormattedDate date={pubDate} />
+                            </div>
+                    }
+
+                    { updatedDate &&
+                            <div class="flex items-center space-x-2">
+                                <Icon name="mdi:update" />
+                                <FormattedDate date={updatedDate} />
+                            </div>
+                    }
+                </div>
+            }
+        </div>
+    </section>
+}
 <main class="p-6">
     <slot />
 </main>
