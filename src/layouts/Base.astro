@@ -4,8 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Icon } from 'astro-icon/components';
 import FormattedDate from '../components/FormattedDate.astro';
-
-const { title, description, type, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate, category, tags } = Astro.props.frontmatter || Astro.props;
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const { title = SITE_TITLE, description = SITE_DESCRIPTION, type, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate, category, tags } = Astro.props.frontmatter || Astro.props;
 
 const pageTitle = leadTitle ? `${leadTitle} &bull; ${title}` : title;
 const pageDescription = lead || description;
