@@ -11,21 +11,19 @@ const posts = (await getCollection('blog')).sort(
 
 <!doctype html>
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<section>
-		<ul>
+	<section class="container mx-auto">
+		<div class="grid grid-cols-1 md:grid-cols-3">
 			{
 				posts.map((post) => (
-					<li>
-						<a href={`/blog/${post.slug}/`}>
-							<img width={720} height={360} src={post.data.heroImage} alt="" />
-							<h4 class="title">{post.data.title}</h4>
-							<p class="date">
-								<FormattedDate date={post.data.pubDate} />
-							</p>
-						</a>
-					</li>
+					<a href={`/blog/${post.slug}/`} class="m-4 p-2 bg-gray-800 hover:bg-blue-800 rounded-md transition duration-200">
+						<img width={720} height={360} src={post.data.heroImage} alt="" />
+						<h4 class="title">{post.data.title}</h4>
+						<p class="date">
+							<FormattedDate date={post.data.pubDate} />
+						</p>
+					</a>
 				))
 			}
-		</ul>
+		</div>
 	</section>
 </Base>
