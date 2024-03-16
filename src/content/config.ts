@@ -8,6 +8,7 @@ const blog = defineCollection({
 		description: z.string(),
 		category: z.string().optional(),
 		tags: z.string().optional(),
+		useHeroOverlay: z.boolean().optional(),
 		// Transform string to Date object
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
