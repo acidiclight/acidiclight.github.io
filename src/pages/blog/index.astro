@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import BlogGrid from '../../components/BlogGrid.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
@@ -12,18 +13,6 @@ const posts = (await getCollection('blog')).sort(
 <!doctype html>
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION} leadTitle="Blog" lead="...where I write about my various mundane and probably boring adventures using a computer.">
 	<section class="container mx-auto">
-		<div class="grid grid-cols-1 md:grid-cols-3">
-			{
-				posts.map((post) => (
-					<a href={`/blog/${post.slug}/`} class="m-4 p-2 bg-gray-800 hover:bg-blue-800 rounded-md transition duration-200">
-						<img width={720} height={360} src={post.data.heroImage} alt="" />
-						<h4 class="title">{post.data.title}</h4>
-						<p class="date">
-							<FormattedDate date={post.data.pubDate} />
-						</p>
-					</a>
-				))
-			}
-		</div>
+		<BlogGrid />
 	</section>
 </Base>

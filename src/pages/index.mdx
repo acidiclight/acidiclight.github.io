@@ -4,17 +4,15 @@ leadTitle: "Hello!"
 lead: "I'm Michael. I am a blind game developer and C# programmer most well-known for my work as lead programmer of Restitched."
 ritchie: true
 ---
+import BlogGrid from '../components/BlogGrid.astro';
 
-<section name="under-construction" class="bg-red-800">
-    <div class="container mx-auto text-center">
-        You are viewing the **new version** of my website. This website is under construction, so expect bugs and issues.
-        <a href="https://old.acidiclight.dev/">Go to old site</a>
-        or 
-        <a href="https://github.com/acidiclight/acidiclight.github.io/issues">report a problem</a>
-    </div>
+**Hey, you!** You're viewing the new version of my website. This version is still under construction, and there are bugs and missing content. In the mean-time, you can [view the old site](https://old.acidiclight.dev/) or [report an issue](https://github.com/acidiclight/acidiclight.github.io/issues).
+
+## Blog
+…Where I write about writing code.
+
+<section name="blog-recent-posts" class="container">
+<BlogGrid limit="3" />
 </section>
 
-<div class="container mx-auto">
-    ## Nothing to see here!
-    I haven't moved enough content over from the old site, so I don't have anything to display here yet.
-</div>
+<a href="/blog" class="button">View all posts</a>

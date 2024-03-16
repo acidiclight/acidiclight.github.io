@@ -7,6 +7,12 @@ body {
     @apply text-gray-50
 }
 
+a.button {
+    @apply font-semibold;
+    @apply transition duration-200 bg-gray-950 text-blue-400 border-solid border-2 border-blue-400 rounded-md px-4 py-2;
+    @apply hover:bg-blue-400 hover:text-white
+}
+
 p {
     @apply leading-loose;
 }
