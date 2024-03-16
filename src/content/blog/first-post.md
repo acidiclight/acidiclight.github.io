@@ -1,16 +1,39 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+title: 'Plans for a rewrite – why, and what went wrong with the current code'
+description: 'Although Socially Distant sounds like a simple game idea at first glance, the programming required to make it work isn’t. Being an operating system simulation game at its core, it comes with many of the same challenges associated with building an actual desktop environment – with the added complexity of turning that into a game, and adding other functionality required by a game such as a robust save system, while also making the game run well and be visually appealing. It is quite an undertaking for a small team of hobbyists, and it’s time for us to regroup.'
+pubDate: 'Feb 17 2023'
+category: Socially Distant
+tags: devlog
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Although Socially Distant sounds like a simple game idea at first glance, the programming required to make it work isn’t. Being an operating system simulation game at its core, it comes with many of the same challenges associated with building an actual desktop environment – with the added complexity of turning that into a game, and adding other functionality required by a game such as a robust save system, while also making the game run well and be visually appealing. It is quite an undertaking for a small team of hobbyists, and it’s time for us to regroup.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## Our current situation
+Development of the game hasn’t progressed for some time now. The project has remained dormant, with no significant changes or progress since late 2022. Unfortunately, this is ironically the result of trying to move too quickly as a team while focusing on the wrong aspects of development first. This has resulted in many of us, including myself as lead programmer and creative director, just not knowing where to go with the project and what to do with the current code. It’s essentially the Longhorn Effect, for those of you who like to look back at Windows development history. As a codebase, Socially Distant is held together with the preverbial duct-tape and that’s not up to my standard as a programmer.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+## My plan to fix it
+I’ve learned quite a lot about Unity and C# in general thanks to working on Trixel Creative’s Restitched, which uses the same engine and general architecture as Socially Distant, as a result of me being lead programmer of both titles for some time. In fact, both games share an audio system in the form of TrixelAudio, an open-source Unity audio framework also written by yours truly. Needless to say, I’ve learned a lot – and I’m confidently I could do better with Socially Distant this time around. That’s why I’ve chosen to rewrite the game from scratch, still using Unity. One could almost get a laugh by calling it “Socially Distant: Restitched,” but I’ll refrain.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+## Fixing more than just the code
+The codebase isn’t the only problem that needs to be solved – in fact, it’s not nearly the hardest either. There are other problems with Socially Distant that I aim to fix with this fresh start as well, mostly related to project structure and organization.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+I’d like to start by making sure there’s a **clear end-goal** for the project, as well as concise and easy-to-reach milestones that the community can track progress with. That way, we all know where we’re headed and how we’re going to get there.
+
+I also want to build the game with maintainability in mind from the start. This means making it easy for other people to join the project and for me to come back to it with fresh eyes and not feel lost in the code. Many portions of the Socially Distant source code today haven’t been substantially touched since older projects of mine from 2015, and I don’t know how they work.
+
+## How we’ll approach development this time
+Although this is in no way a concrete or set-in-stone plan, I’ll give you all an idea of what development will ideally look like for new Socially Distant.
+
+First stage will be putting together a solid foundation and codebase. The game won’t look unique or pretty, nor will it have a story or any reason to play it beyond testing, but it’ll be a workable prototype we can further polish later. It’ll be more like building a basic operating system/desktop environment instead of a game.
+
+Once we have a solid “OS” to work with, we’ll gameify it and bring in things like the game’s story. It still won’t look like a pretty “OS,” but it’ll work well and it’ll be a playable game.
+
+Once we have a game, we’ll focus on making it look visually interesting. Luckily, I have a perfect idea in my head of what it’ll look like – so I’ll get it on paper, and by the time we need to worry about it, we’ll hopefully be able to get the resources needed to bring this idea to life.
+
+Obviously, plans change over time – so the most important part is how we **begin** things. The foundation of Socially Distant’s code is important to get right, and we’ll design it in a way that can adapt to change.
+
+## What happens to the old code?
+Parts of it are salvageable, but we’ll likely use it as a spiritual base rather than directly re-using old code in the new game. The old code is on a private Git repository, and will be archived. Assets from the old game, such as the logo and wallpaper, will come along with us for the ride, but most of the code won’t.
+
+## So….that’s that.
+I’ve got a lot of work to do as a programmer, and there’s no better time to start than now. So let’s start.
