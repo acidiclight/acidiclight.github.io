@@ -12,7 +12,7 @@ export const A11Y_ISSUE_LINK = "https://github.com/acidiclight/acidiclight.githu
 export const SOCIAL_LINKS = [
     {
         name: 'Mastodon',
-        link: 'https://mastodon.social/acidiclight',
+        link: 'https://mastodon.social/@acidiclight',
         icon: 'mdi:mastodon'
     },
     {
