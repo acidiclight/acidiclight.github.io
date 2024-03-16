@@ -6,11 +6,14 @@ import { Icon } from 'astro-icon/components';
 import FormattedDate from '../components/FormattedDate.astro';
 
 const { title, description, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate } = Astro.props.frontmatter || Astro.props;
+
+const pageTitle = leadTitle ? `${leadTitle} &bull; ${title}`;
+const pageDescription = lead || description;
 ---
 
 <html lang="en">
 <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={pageTitle} description={pageDescription} image={heroImage} />
 </head>
 
 <body>
