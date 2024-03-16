@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 const { title, description, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate } = Astro.props.frontmatter || Astro.props;
 
-const pageTitle = leadTitle ? `${leadTitle} &bull; ${title}`;
+const pageTitle = leadTitle ? `${leadTitle} &bull; ${title}` : title;
 const pageDescription = lead || description;
 ---
 
