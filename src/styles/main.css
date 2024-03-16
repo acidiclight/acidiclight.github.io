@@ -7,6 +7,10 @@ body {
     @apply text-gray-50
 }
 
+a {
+    @apply font-semibold underline text-blue-400 transition duration-200 hover:text-white;
+}
+
 a.button {
     @apply font-semibold;
     @apply transition duration-200 bg-gray-950 text-blue-400 border-solid border-2 border-blue-400 rounded-md px-4 py-2;
