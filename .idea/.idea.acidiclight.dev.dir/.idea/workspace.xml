@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9525e06-1c97-4c9c-b818-a0a7003f7d23" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pages/my-work/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/my-work/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.acidiclight.dev.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.acidiclight.dev.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ritchie/Projects/Alkaline Thunder/idea-speech/idea-speech/build/libs/idea-speech-1.0-SNAPSHOT.jar",
+    "last_opened_file_path": "/home/ritchie/Web/sociallydistantgame.com",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,7 +64,7 @@
       <workItem from="1710522911885" duration="7911000" />
       <workItem from="1710563650996" duration="30783000" />
       <workItem from="1710645358312" duration="3989000" />
-      <workItem from="1710649520791" duration="6960000" />
+      <workItem from="1710649520791" duration="8186000" />
     </task>
     <servers />
   </component>
