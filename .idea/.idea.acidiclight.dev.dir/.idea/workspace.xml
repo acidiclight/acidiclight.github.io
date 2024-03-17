@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9525e06-1c97-4c9c-b818-a0a7003f7d23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.acidiclight.dev.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.acidiclight.dev.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
       <workItem from="1710522911885" duration="7911000" />
       <workItem from="1710563650996" duration="30783000" />
       <workItem from="1710645358312" duration="3989000" />
-      <workItem from="1710649520791" duration="2626000" />
+      <workItem from="1710649520791" duration="4036000" />
     </task>
     <servers />
   </component>
