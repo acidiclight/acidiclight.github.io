@@ -1,0 +1,14 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+const { title, url, image, description } = Astro.props;
+---
+
+<a href={url} class="m-4 p-4 bg-gray-800 hover:bg-blue-800 rounded-md transition duration-200">
+    <h4 class="text-center">{title}</h4>
+    { image && <img width={720} height={360} src={image} alt="" /> }
+    <p>
+        { description }
+    </p>
+    
+    <slot />
+</a>

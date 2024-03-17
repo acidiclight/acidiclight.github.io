@@ -17,7 +17,7 @@ dd {
     @apply font-light;
 }
 
-a {
+article a, footer a {
     @apply font-semibold underline text-blue-400 transition duration-200 hover:text-white;
 }
 
