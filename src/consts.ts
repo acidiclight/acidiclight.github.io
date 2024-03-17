@@ -44,6 +44,10 @@ export const MENU_LINKS = [
         href: "/"
     },
     {
+        name: 'My Work',
+        href: '/my-work'
+    },
+    {
         name: "Blog",
         href: "/blog"
     },

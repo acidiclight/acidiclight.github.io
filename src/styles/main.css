@@ -7,14 +7,26 @@ body {
     @apply text-gray-50
 }
 
+dl {
+    @apply grid grid-cols-2
+}
+dt {
+    @apply font-semibold;
+}
+dd {
+    @apply font-light;
+}
+
 a {
     @apply font-semibold underline text-blue-400 transition duration-200 hover:text-white;
 }
 
 a.button {
+    @apply flex items-center justify-center space-x-2;
     @apply font-semibold;
     @apply transition duration-200 bg-gray-950 text-blue-400 border-solid border-2 border-blue-400 rounded-md px-4 py-2;
-    @apply hover:bg-blue-400 hover:text-white
+    @apply hover:bg-blue-400 hover:text-white;
+    @apply no-underline;
 }
 
 p {

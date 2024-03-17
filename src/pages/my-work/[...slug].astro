@@ -1,0 +1,70 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+
+import Base from '../../layouts/Base.astro';
+import YouTube from '../../components/YouTube.astro';
+export async function getStaticPaths() {
+    const projects = await getCollection('projects');
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: project,
+    }));
+}
+
+type Props = CollectionEntry<'projects'>;
+
+const project = Astro.props.data;
+const { Content } = await Astro.props.render();
+---
+
+<Base leadTitle={project.title} lead={project.description} heroImage={project.image} useHeroOverlay={project.useHeroOverlay}>
+    <div class="container mx-auto md:flex items-start justify-between md:space-x-4">
+        <article class="md:w-3/4">
+            <Content />
+
+            { project.trailers && project.trailers.map((trailer) => (
+                    <h2>{ trailer.name }</h2>
+                    <YouTube id={trailer.youtube} />
+            ))}
+        </article>
+        <aside class="md:w-1/4">
+            { project.image && 
+                <img src={project.image} alt="Restitched key art" />
+            }
+            
+            <h2>Project info</h2>
+            <dl>
+                <dt>Type</dt>
+                <dd>{ project.type }</dd>
+                { project.organization && (
+                    <dt>Company</dt>
+                    <dd>{ project.organization }</dd>
+                )}
+                { project.role && (
+                    <dt>My role</dt>
+                    <dd>{ project.role }</dd>
+                )}
+            </dl>
+
+            { (project.website || project.links) && (
+                <h2>Project links</h2>
+                <div class="flex flex-col items-stretch space-y-2">
+                    { project.website && (
+                        <a href={project.website} class="button">
+                            <Icon name="mdi:globe" />
+                            <span>Website</span>
+                        </a>
+                    )}
+
+                    { project.links && project.links.map((link) => (
+                        <a href={link.url} class="button">
+                            <Icon name={link.icon} />
+                            <span>{ link.name }</span>
+                        </a>
+                    ))}
+                </div>
+            )}
+        </aside>
+    </div>
+</Base>

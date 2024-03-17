@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+
+import Base from '../../layouts/Base.astro';
+
+const projects = (await getCollection('projects')).sort(
+    (a, b) => a.data.title.valueOf() - b.data.title.valueOf()
+);
+---
+
+<Base leadTitle="My Work"  lead="All the stuff I've made, worked on, or contributed to.">
+    <section name="work" class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            {projects.map((project) => (
+                <a href=`/my-work/${project.slug}`>
+                    { project.data.title }
+                </a>
+            ))}
+        </div>
+    </section>
+</Base>
