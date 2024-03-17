@@ -57,6 +57,10 @@ article iframe.right {
     @apply md:m-4 md:max-w-xs md:float-right md:object-contain md:w-auto object-fill w-full
 }
 
+blockquote {
+    @apply border-blue-600 border-x-8 border-e-0 pl-2;
+}
+
 main p {
     @apply mb-4 mt-2;
 }
