@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+import Post from '../components/Post.astro';
+
+const projects = (await getCollection('projects')).sort(
+    (a, b) => a.data.title.valueOf() - b.data.title.valueOf()
+);
+
+const { limit = projects.length } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3">
+    {projects.slice(0, limit).map((project) => (
+            <Post url=`/my-work/${project.slug}` title={project.data.title} description={project.data.description} image={project.data.image}>
+                <div class="flex items-center justify-start"
+                <span class="font-bold">{ project.data.type }</span>
+                { project.data.organization && (
+                        <span>&nbsp;&bull; { project.data.organization }</span>
+                )}
+                { project.data.role && (
+                        <span>&nbsp;&bull; { project.data.role }</span>
+                )}
+
+                </div>
+            </Post>
+    ))}
+</div>

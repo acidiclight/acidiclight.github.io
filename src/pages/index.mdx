@@ -6,8 +6,20 @@ ritchie: true
 ---
 import BlogGrid from '../components/BlogGrid.astro';
 import SocialLinks from '../components/SocialLinks.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
 
 **Hey, you!** You're viewing the new version of my website. This version is still under construction, and there are bugs. If you find them, please [report an issue](https://github.com/acidiclight/acidiclight.github.io/issues).
+
+## My Work
+...All the things I do.
+
+<section name="my-work-recent-posts" class="container">
+<ProjectGrid limit="3" />
+</section>
+
+<a href="/my-work" class="button">View all my work</a>
+
+<div class="h-48" />
 
 ## Blog
 …Where I write about writing code.
