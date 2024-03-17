@@ -5,7 +5,7 @@ image: '/assets/projects/restitched-key-art.jpg'
 type: 'Game'
 organization: "Trixel Creative"
 role: "Lead Programmer"
-website: 'https://trixelcreative.com/restitched"'
+website: 'https://trixelcreative.com/restitched'
 startDate: 'Sep 4 2021'
 useHeroOverlay: true
 
