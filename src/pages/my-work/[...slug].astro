@@ -18,7 +18,7 @@ const project = Astro.props.data;
 const { Content } = await Astro.props.render();
 ---
 
-<Base leadTitle={project.title} lead={project.description} heroImage={project.image} useHeroOverlay={project.useHeroOverlay}>
+<Base leadTitle={project.title} lead={project.description} heroImage={project.image} useHeroOverlay={project.useHeroOverlay} pubDate={project.startDate} endDate={project.endDate} leaveDate={project.leaveDate}>
     <div class="container mx-auto md:flex items-start justify-between md:space-x-4">
         <article class="md:w-3/4">
             <Content />
