@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { Icon } from 'astro-icon/components';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-const { useHeroOverlay = false, title = SITE_TITLE, description = SITE_DESCRIPTION, type, pubDate, lead, leadTitle, ritchie, heroImage, updatedDate, category, tags } = Astro.props.frontmatter || Astro.props;
+const { useHeroOverlay = false, title = SITE_TITLE, description = SITE_DESCRIPTION, type, pubDate, lead, leadTitle, endDate, leaveDate, ritchie, heroImage, updatedDate, category, tags } = Astro.props.frontmatter || Astro.props;
 
 const pageTitle = leadTitle ? `${leadTitle} &bull; ${title}` : title;
 const pageDescription = lead || description;
@@ -41,8 +41,20 @@ const pageTags = tags ? tags.split(',').map((tag) => tag.trim()) : [];
                             <div class="flex items-center space-x-2">
                                 <Icon name="mdi:calendar" />
                                 <FormattedDate date={pubDate} />
+                                { leaveDate && 
+                                    <span>until</span>
+                                    <FormattedDate date={leaveDate} />
+                                }
                             </div>
                     }
+                    { endDate &&
+                            <div class="flex items-center space-x-2">
+                                <Icon name="mdi:check" />
+                                Finished on
+                                <FormattedDate date={endDate} />
+                            </div>
+                    }
+                    
                     { updatedDate &&
                             <div class="flex items-center space-x-2">
                                 <Icon name="mdi:update" />

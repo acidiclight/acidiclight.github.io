@@ -7,6 +7,7 @@ organization: "Trixel Creative"
 role: "Lead Programmer"
 website: 'https://trixelcreative.com/restitched'
 startDate: 'Sep 4 2021'
+leaveDAte: 'Apr 27 2024'
 useHeroOverlay: true
 
 trailers:
