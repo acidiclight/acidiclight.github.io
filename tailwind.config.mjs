@@ -6,6 +6,9 @@ export default {
 	],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			'sans': ['Rajdhani', 'Rajdhani Bold', 'Rajdhani Light', 'Rajdhani SemiBold', 'Rajdhani Medium']	
+		},
 		extend: {},
 	},
 	plugins: [
