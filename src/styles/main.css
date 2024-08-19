@@ -27,6 +27,10 @@
     src: url('../../public/fonts/Rajdhani-Light.ttf')
 }
 
+#mobile-nav {
+    z-index: 1;
+}
+
 body {
     @apply bg-gray-950;
     @apply text-gray-50
