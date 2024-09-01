@@ -29,7 +29,7 @@ And the most egregious example, the active tab of Firefox (and various other bro
 
 ![I literally don't fucking know, sorry screen readers...](https://cdn.acidiclight.dev/original/1X/73173332794e3b23b485ebbed34f525739025642.png)
 
-Every time I see something like these, I growl at the world and then let out a depressign sigh knowing the only thing I can do about it is to complain on a blog that virtually no one knows exists.
+Every time I see something like these, I growl at the world and then let out a depressing sigh knowing the only thing I can do about it is to complain on a blog that virtually no one knows exists.
 
 ## So what's the actual problem?
 The main problem is the bright backgrounds. All of these buttons/tabs either have extremely bright colored backgrounds, or something close to a pure white background. While most of the page/interface around them is dark with light text, these interface elements go out of their way to stand out by being obnoxiously bright.
